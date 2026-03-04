@@ -1,1 +1,2 @@
-consloe.log('gitHub')
+console.log('gitHub')
+
