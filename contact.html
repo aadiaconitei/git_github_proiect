@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Uthr – My Account </title>
+    <title>Uthr – Contact Page </title>
     <meta name="description"
         content="Uthr Fashion eCommerce Bootstrap 5 Template is an innovative and modern e-commerce online store website template." />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -92,10 +92,8 @@
                                         <li><a href="index.html">demo</a> </li>
                                         <li><a href="shop.html">shop</a></li>
                                         <li><a href="product-details.html">product</a></li>
-                                        <li><a href="login.html">login</a></li>
-                                        <li><a href="register.html">register</a></li>
-                                        <li><a class="active" href="myaccount.html">my account</a></li>
-                                        <li><a href="contact.html">contact</a></li>
+                                        <li><a href="myaccount.html">my account</a></li>
+                                        <li><a class="active" href="contact.html">contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -119,9 +117,9 @@
                     <div class="breadcrumb_content text-center">
                         <ul>
                             <li><a href="index.html">home</a></li>
-                            <li>account</li>
+                            <li>contact</li>
                         </ul>
-                        <h3>my account</h3>
+                        <h3>Contact Us</h3>
                     </div>
                 </div>
             </div>
@@ -130,54 +128,50 @@
 
     <div class="checkout_section">
         <div class="container">
-            <div class="row align-items-start">
-                <div class="col-lg-4 col-md-5 mb-4 mb-md-0">
-                    <div class="checkout_info text-center" style="display:block;">
-                        <div class="mb-3">
-                            <img src="assets/img/others/about1.jpg" alt="User Photo" class="img-fluid">
-                        </div>
-                        <h4>Profile Photo</h4>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-7">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
                     <div class="checkout_info" style="display:block;">
-                        <h3>Informații utilizator</h3>
+                        <h3>Date contact</h3>
+                        <p class="mb-4">Ai întrebări? Trimite-ne un mesaj și revenim cât mai rapid.</p>
+                        <ul class="mb-4">
+                            <li class="mb-2"><i class="ion-ios-location-outline"></i> Barcelona, Spain</li>
+                            <li class="mb-2"><i class="ion-ios-telephone-outline"></i> +34 93 123 45 67</li>
+                            <li class="mb-2"><i class="ion-ios-email-outline"></i> contact@uthrstore.com</li>
+                        </ul>
+
                         <form action="#">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form_group">
-                                        <label>First Name</label>
-                                        <input type="text" value="Adriana" readonly>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form_group">
-                                        <label>Last Name</label>
-                                        <input type="text" value="Diaconitei" readonly>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="form_group">
-                                <label>Email</label>
-                                <input type="email" value="adriana@example.com" readonly>
+                                <label>Nume <span>*</span></label>
+                                <input type="text" required>
                             </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form_group">
-                                        <label>Password</label>
-                                        <input type="password" value="********" readonly>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form_group">
-                                        <label>Confirm Password</label>
-                                        <input type="password" value="********" readonly>
-                                    </div>
-                                </div>
+                            <div class="form_group">
+                                <label>Email <span>*</span></label>
+                                <input type="email" required>
+                            </div>
+                            <div class="form_group">
+                                <label>Subiect</label>
+                                <input type="text">
+                            </div>
+                            <div class="form_group">
+                                <label>Mesaj <span>*</span></label>
+                                <textarea required></textarea>
+                            </div>
+                            <div class="form_group group_3">
+                                <button class="btn btn-primary" type="submit">Trimite mesaj</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="checkout_info" style="display:block; height:100%;">
+                        <h3>Locația noastră</h3>
+                        <div class="mt-3" style="min-height:420px;">
+                            <iframe title="Google Maps Barcelona" width="100%" height="420" style="border:0;"
+                                loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                                src="https://maps.google.com/maps?q=Sagrada+Familia,+Barcelona&t=&z=17&ie=UTF8&iwloc=&output=embed">
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
