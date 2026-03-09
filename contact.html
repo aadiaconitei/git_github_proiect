@@ -139,14 +139,14 @@
                             <li class="mb-2"><i class="ion-ios-email-outline"></i> contact@uthrstore.com</li>
                         </ul>
 
-                        <form action="#">
+                        <form id="contact-form" action="#">
                             <div class="form_group">
                                 <label>Nume <span>*</span></label>
-                                <input type="text" required>
+                                <input id="contact-name" type="text" required>
                             </div>
                             <div class="form_group">
                                 <label>Email <span>*</span></label>
-                                <input type="email" required>
+                                <input id="contact-email" type="email" required>
                             </div>
                             <div class="form_group">
                                 <label>Subiect</label>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="form_group">
                                 <label>Mesaj <span>*</span></label>
-                                <textarea required></textarea>
+                                <textarea id="contact-message" required></textarea>
                             </div>
                             <div class="form_group group_3">
                                 <button class="btn btn-primary" type="submit">Trimite mesaj</button>
@@ -232,6 +232,7 @@
     <script src="assets/js/jquery.instagramFeed.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/mailchimp-ajax.js"></script>
+    <script src="form-validation.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>
