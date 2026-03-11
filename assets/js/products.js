@@ -238,5 +238,17 @@ const products = [
         reviews: 50,
         image: "assets/img/product/product4.jpg",
         description: "Top-tier performance sneakers for athletes."
+    },
+    {
+        id: 21,
+        name: "21 Elite Performance Pro",
+        category: "Running",
+        price: 120,
+        oldPrice: 145,
+        discount: 17,
+        rating: 5,
+        reviews: 50,
+        image: "assets/img/product/product6.jpg",
+        description: "Top-tier performance sneakers for athletes."
     }
 ];
