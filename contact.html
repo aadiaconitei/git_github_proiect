@@ -183,10 +183,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div
-          class="contact_info_block mb-4 p-3"
-          style="background: #f9f9f9; border-radius: 0.5rem"
-        >
+        <div class="contact_info_block mb-4 p-3">
           <h2>Informații Contact</h2>
           <p class="mb-2">
             <strong>Adresă:</strong> Strada Exemplu 123, București, România<br /><strong
@@ -237,7 +234,16 @@
                 </div>
                 <div class="form_group">
                   <label>Mesaj <span>*</span></label>
-                  <textarea id="contact-message" required></textarea>
+                  <textarea
+                    id="contact-message"
+                    style="
+                      background-color: #6a7964;
+                      width: 100%;
+                      border: 1px solid white;
+                      height: 120px;
+                    "
+                    required
+                  ></textarea>
                 </div>
                 <div class="form_group group_3">
                   <button class="btn btn-primary" type="submit">
@@ -329,5 +335,6 @@
     <script src="assets/js/mailchimp-ajax.js"></script>
     <script src="assets/js/form-validation.js"></script>
     <script src="assets/js/main.js"></script>
+    
   </body>
 </html>

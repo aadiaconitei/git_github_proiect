@@ -89,13 +89,14 @@ function renderMiniCart() {
   } else {
     cartGallery.innerHTML = cartItems
       .map(function (item) {
+        var itemName = item.name || item.title || "Untitled Product";
         return `
                     <div class="cart_item" data-product-id="${item.id}">
                         <div class="cart_img">
-                            <a href="#"><img src="${item.image}" alt="${item.name}"></a>
+                            <a href="#"><img src="${item.image}" alt="${itemName}"></a>
                         </div>
                         <div class="cart_info">
-                            <a href="#">${item.name}</a>
+                            <a href="#">${itemName}</a>
                             <p>${item.quantity} x <span>$${Number(item.price).toFixed(2)}</span></p>
                         </div>
                         <div class="cart_remove">
@@ -119,6 +120,112 @@ function renderMiniCart() {
   }
 }
 
+function getStableProductId(name) {
+  if (!name) {
+    return Date.now();
+  }
+
+  var hash = 0;
+  for (var i = 0; i < name.length; i++) {
+    hash = (hash << 5) - hash + name.charCodeAt(i);
+    hash |= 0;
+  }
+
+  // Ensure stable positive ID offset from existing numeric IDs
+  return Math.abs(hash) + 1000000;
+}
+
+function findProductFromCard(cardEl) {
+  if (!cardEl) {
+    return null;
+  }
+
+  var titleEl = cardEl.querySelector(".product_name a");
+  var name = titleEl?.textContent?.trim();
+  var priceEl =
+    cardEl.querySelector(".price_box .current_price") ||
+    cardEl.querySelector(".price_box");
+  var price = 0;
+  if (priceEl) {
+    var rawText = String(priceEl.textContent || "");
+    var numberMatch = rawText.match(/\d+[\.,]?\d*/g);
+    if (numberMatch && numberMatch.length > 0) {
+      price = Number(numberMatch[0].replace(/,/g, "")) || 0;
+    }
+  }
+  var imgEl = cardEl.querySelector(".product_thumb img");
+  var image = imgEl?.getAttribute("src") || "";
+
+  if (typeof products !== "undefined" && Array.isArray(products) && name) {
+    var product = products.find(function (p) {
+      return String(p.name).trim() === String(name).trim();
+    });
+    if (product) {
+      return product;
+    }
+  }
+
+  if (!name) {
+    return null;
+  }
+
+  var idFromAttr = cardEl.getAttribute("data-product-id");
+  var stableId = idFromAttr ? Number(idFromAttr) : getStableProductId(name);
+
+  return {
+    id: Number(stableId),
+    name: name,
+    price: price,
+    image: image,
+    quantity: 1,
+  };
+}
+
+function initIndexAddToCart() {
+  document.body.addEventListener("click", function (event) {
+    var cartBtn = event.target.closest(".add_to_cart a, .js-add-cart");
+    if (!cartBtn) {
+      return;
+    }
+
+    event.preventDefault();
+
+    var card = cartBtn.closest(".single_product");
+    if (!card) {
+      return;
+    }
+
+    var product = findProductFromCard(card);
+    if (!product || !product.name) {
+      return;
+    }
+
+    addProductToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      quantity: 1,
+    });
+
+    var addToCartMessage = document.createElement("div");
+    addToCartMessage.textContent = "Produsul a fost adăugat în coș.";
+    addToCartMessage.style.position = "fixed";
+    addToCartMessage.style.bottom = "20px";
+    addToCartMessage.style.right = "20px";
+    addToCartMessage.style.backgroundColor = "rgba(0,0,0,0.75)";
+    addToCartMessage.style.color = "#fff";
+    addToCartMessage.style.padding = "10px 14px";
+    addToCartMessage.style.borderRadius = "6px";
+    addToCartMessage.style.zIndex = "9999";
+    document.body.appendChild(addToCartMessage);
+
+    setTimeout(function () {
+      addToCartMessage.remove();
+    }, 1300);
+  });
+}
+
 function updateShoppingCartUI() {
   updateCartCountUI();
   renderMiniCart();
@@ -131,6 +238,35 @@ window.addEventListener("storage", function (event) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  initIndexAddToCart();
+
+  // Global mini-cart remove handler (index/shop/product-details)
+  document.body.addEventListener("click", function (event) {
+    var removeBtn = event.target.closest(".js-mini-cart-remove");
+    if (!removeBtn) {
+      return;
+    }
+
+    event.preventDefault();
+
+    var removeId = Number(
+      removeBtn.getAttribute("data-product-id") || removeBtn.dataset.productId,
+    );
+    if (Number.isNaN(removeId)) {
+      return;
+    }
+
+    var cart = getCartFromStorage();
+    var updatedCart = cart.filter(function (item) {
+      return Number(item.id) !== removeId;
+    });
+
+    saveCartToStorage(updatedCart);
+    updateShoppingCartUI();
+  });
+
+  updateShoppingCartUI();
+
   var cartBody = document.getElementById("cart-products-body");
   var subtotalElement = document.getElementById("cart-subtotal");
   var grandTotalElement = document.getElementById("cart-grandtotal");
