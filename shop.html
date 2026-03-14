@@ -307,9 +307,9 @@
                                         </ul>
                                     </li>
                                     <li><a href="#"><i class="icon-heart icons"></i></a> <span
-                                            class="item_count">2</span></li>
+                                            class="item_count wishlist-count" style="display:none"></span></li>
                                     <li class="shopping_cart"><a href="#"><i class="icon-basket-loaded icons"></i></a>
-                                        <span class="item_count">2</span>
+                                        <span class="item_count cart-count" style="display:none"></span>
                                     </li>
                                 </ul>
                             </div>
@@ -559,903 +559,951 @@
                         </div>
                     </div>
                     <!--shop toolbar end-->
-                    <div class="row shop_wrapper">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a href="product-details.html">
-                                        <img class="primary_img" src="assets/img/product/product1.jpg"
-                                            alt="consectetur">
-                                    </a>
-                                    <div class="product_action">
-                                        <ul>
-                                            <li class="wishlist"><a href="#" data-tippy="Wishlist"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-heart icons"></i></a></li>
 
-                                            <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
-                                                    data-tippy="Quick View" href="#" data-tippy-inertia="true"
-                                                    data-tippy-delay="50" data-tippy-arrow="true"
-                                                    data-tippy-placement="left"><i
-                                                        class="icon-size-fullscreen icons"></i></a></li>
-                                            <li class="compare"><a data-tippy="Compare" href="#"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-refresh icons"></i></a></li>
-                                        </ul>
+                    <!-- Products -->
+                    <div class="col-lg-9 col-md-8">
+                        <div class="row shop_wrapper">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                <div class="single_product">
+                                    <div class="product_thumb">
+                                        <a href="product-details.html">
+                                            <img class="primary_img" src="assets/img/product/product1.jpg"
+                                                alt="consectetur">
+                                        </a>
+                                        <div class="product_action">
+                                            <ul>
+                                                <li class="wishlist"><a href="#" data-tippy="Wishlist"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-heart icons"></i></a></li>
+
+                                                <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
+                                                        data-tippy="Quick View" href="#" data-tippy-inertia="true"
+                                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                                        data-tippy-placement="left"><i
+                                                            class="icon-size-fullscreen icons"></i></a></li>
+                                                <li class="compare"><a data-tippy="Compare" href="#"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-refresh icons"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product_label">
+                                            <span>-18%</span>
+                                        </div>
                                     </div>
-                                    <div class="product_label">
-                                        <span>-18%</span>
+                                    <div class="product_content grid_content text-center">
+                                        <div class="product_ratting">
+                                            <ul class="d-flex justify-content-center">
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><span>(2)</span></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="product_list_content">
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <p><a href="#">shows</a></p>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="product_desc">
+                                            <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et
+                                                mattis
+                                                vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante
+                                                ipsum
+                                                primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                                Aenean
+                                                eleifend laoreet congue. Viva..</p>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="product_content grid_content text-center">
-                                    <div class="product_ratting">
-                                        <ul class="d-flex justify-content-center">
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><span>(2)</span></li>
-                                        </ul>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                <div class="single_product">
+                                    <div class="product_thumb">
+                                        <a href="product-details.html">
+                                            <img class="primary_img" src="assets/img/product/product5.jpg"
+                                                alt="consectetur">
+                                        </a>
+                                        <div class="product_action">
+                                            <ul>
+                                                <li class="wishlist"><a href="#" data-tippy="Wishlist"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-heart icons"></i></a></li>
+
+                                                <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
+                                                        data-tippy="Quick View" href="#" data-tippy-inertia="true"
+                                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                                        data-tippy-placement="left"><i
+                                                            class="icon-size-fullscreen icons"></i></a></li>
+                                                <li class="compare"><a data-tippy="Compare" href="#"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-refresh icons"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product_label">
+                                            <span>-18%</span>
+                                        </div>
                                     </div>
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
+                                    <div class="product_content grid_content text-center">
+                                        <div class="product_ratting">
+                                            <ul class="d-flex justify-content-center">
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><span>(2)</span></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+                                        </div>
                                     </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
+                                    <div class="product_list_content">
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <p><a href="#">shows</a></p>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="product_desc">
+                                            <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et
+                                                mattis
+                                                vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante
+                                                ipsum
+                                                primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                                Aenean
+                                                eleifend laoreet congue. Viva..</p>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="product_list_content">
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <p><a href="#">shows</a></p>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis
-                                            vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum
-                                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-                                            eleifend laoreet congue. Viva..</p>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                <div class="single_product">
+                                    <div class="product_thumb">
+                                        <a href="product-details.html">
+                                            <img class="primary_img" src="assets/img/product/product2.jpg"
+                                                alt="consectetur">
+                                        </a>
+                                        <div class="product_action">
+                                            <ul>
+                                                <li class="wishlist"><a href="#" data-tippy="Wishlist"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-heart icons"></i></a></li>
 
+                                                <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
+                                                        data-tippy="Quick View" href="#" data-tippy-inertia="true"
+                                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                                        data-tippy-placement="left"><i
+                                                            class="icon-size-fullscreen icons"></i></a></li>
+                                                <li class="compare"><a data-tippy="Compare" href="#"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-refresh icons"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product_label">
+                                            <span>-18%</span>
+                                        </div>
+                                    </div>
+                                    <div class="product_content grid_content text-center">
+                                        <div class="product_ratting">
+                                            <ul class="d-flex justify-content-center">
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><span>(2)</span></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="product_list_content">
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <p><a href="#">shows</a></p>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="product_desc">
+                                            <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et
+                                                mattis
+                                                vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante
+                                                ipsum
+                                                primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                                Aenean
+                                                eleifend laoreet congue. Viva..</p>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                <div class="single_product">
+                                    <div class="product_thumb">
+                                        <a href="product-details.html">
+                                            <img class="primary_img" src="assets/img/product/product3.jpg"
+                                                alt="consectetur">
+                                        </a>
+                                        <div class="product_action">
+                                            <ul>
+                                                <li class="wishlist"><a href="#" data-tippy="Wishlist"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-heart icons"></i></a></li>
+
+                                                <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
+                                                        data-tippy="Quick View" href="#" data-tippy-inertia="true"
+                                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                                        data-tippy-placement="left"><i
+                                                            class="icon-size-fullscreen icons"></i></a></li>
+                                                <li class="compare"><a data-tippy="Compare" href="#"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-refresh icons"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product_label">
+                                            <span>-18%</span>
+                                        </div>
+                                    </div>
+                                    <div class="product_content grid_content text-center">
+                                        <div class="product_ratting">
+                                            <ul class="d-flex justify-content-center">
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><span>(2)</span></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="product_list_content">
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <p><a href="#">shows</a></p>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="product_desc">
+                                            <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et
+                                                mattis
+                                                vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante
+                                                ipsum
+                                                primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                                Aenean
+                                                eleifend laoreet congue. Viva..</p>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                <div class="single_product">
+                                    <div class="product_thumb">
+                                        <a href="product-details.html">
+                                            <img class="primary_img" src="assets/img/product/product6.jpg"
+                                                alt="consectetur">
+                                        </a>
+                                        <div class="product_action">
+                                            <ul>
+                                                <li class="wishlist"><a href="#" data-tippy="Wishlist"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-heart icons"></i></a></li>
+
+                                                <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
+                                                        data-tippy="Quick View" href="#" data-tippy-inertia="true"
+                                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                                        data-tippy-placement="left"><i
+                                                            class="icon-size-fullscreen icons"></i></a></li>
+                                                <li class="compare"><a data-tippy="Compare" href="#"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-refresh icons"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product_label">
+                                            <span>-18%</span>
+                                        </div>
+                                    </div>
+                                    <div class="product_content grid_content text-center">
+                                        <div class="product_ratting">
+                                            <ul class="d-flex justify-content-center">
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><span>(2)</span></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="product_list_content">
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <p><a href="#">shows</a></p>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="product_desc">
+                                            <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et
+                                                mattis
+                                                vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante
+                                                ipsum
+                                                primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                                Aenean
+                                                eleifend laoreet congue. Viva..</p>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                <div class="single_product">
+                                    <div class="product_thumb">
+                                        <a href="product-details.html">
+                                            <img class="primary_img" src="assets/img/product/product4.jpg"
+                                                alt="consectetur">
+                                        </a>
+                                        <div class="product_action">
+                                            <ul>
+                                                <li class="wishlist"><a href="#" data-tippy="Wishlist"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-heart icons"></i></a></li>
+
+                                                <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
+                                                        data-tippy="Quick View" href="#" data-tippy-inertia="true"
+                                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                                        data-tippy-placement="left"><i
+                                                            class="icon-size-fullscreen icons"></i></a></li>
+                                                <li class="compare"><a data-tippy="Compare" href="#"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-refresh icons"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product_label">
+                                            <span>-18%</span>
+                                        </div>
+                                    </div>
+                                    <div class="product_content grid_content text-center">
+                                        <div class="product_ratting">
+                                            <ul class="d-flex justify-content-center">
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><span>(2)</span></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="product_list_content">
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <p><a href="#">shows</a></p>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="product_desc">
+                                            <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et
+                                                mattis
+                                                vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante
+                                                ipsum
+                                                primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                                Aenean
+                                                eleifend laoreet congue. Viva..</p>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                <div class="single_product">
+                                    <div class="product_thumb">
+                                        <a href="product-details.html">
+                                            <img class="primary_img" src="assets/img/product/product7.jpg"
+                                                alt="consectetur">
+                                        </a>
+                                        <div class="product_action">
+                                            <ul>
+                                                <li class="wishlist"><a href="#" data-tippy="Wishlist"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-heart icons"></i></a></li>
+
+                                                <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
+                                                        data-tippy="Quick View" href="#" data-tippy-inertia="true"
+                                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                                        data-tippy-placement="left"><i
+                                                            class="icon-size-fullscreen icons"></i></a></li>
+                                                <li class="compare"><a data-tippy="Compare" href="#"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-refresh icons"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product_label">
+                                            <span>-18%</span>
+                                        </div>
+                                    </div>
+                                    <div class="product_content grid_content text-center">
+                                        <div class="product_ratting">
+                                            <ul class="d-flex justify-content-center">
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><span>(2)</span></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="product_list_content">
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <p><a href="#">shows</a></p>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="product_desc">
+                                            <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et
+                                                mattis
+                                                vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante
+                                                ipsum
+                                                primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                                Aenean
+                                                eleifend laoreet congue. Viva..</p>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                <div class="single_product">
+                                    <div class="product_thumb">
+                                        <a href="product-details.html">
+                                            <img class="primary_img" src="assets/img/product/product8.jpg"
+                                                alt="consectetur">
+                                        </a>
+                                        <div class="product_action">
+                                            <ul>
+                                                <li class="wishlist"><a href="#" data-tippy="Wishlist"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-heart icons"></i></a></li>
+
+                                                <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
+                                                        data-tippy="Quick View" href="#" data-tippy-inertia="true"
+                                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                                        data-tippy-placement="left"><i
+                                                            class="icon-size-fullscreen icons"></i></a></li>
+                                                <li class="compare"><a data-tippy="Compare" href="#"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-refresh icons"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product_label">
+                                            <span>-18%</span>
+                                        </div>
+                                    </div>
+                                    <div class="product_content grid_content text-center">
+                                        <div class="product_ratting">
+                                            <ul class="d-flex justify-content-center">
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><span>(2)</span></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="product_list_content">
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <p><a href="#">shows</a></p>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="product_desc">
+                                            <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et
+                                                mattis
+                                                vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante
+                                                ipsum
+                                                primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                                Aenean
+                                                eleifend laoreet congue. Viva..</p>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                <div class="single_product">
+                                    <div class="product_thumb">
+                                        <a href="product-details.html">
+                                            <img class="primary_img" src="assets/img/product/product5.jpg"
+                                                alt="consectetur">
+                                        </a>
+                                        <div class="product_action">
+                                            <ul>
+                                                <li class="wishlist"><a href="#" data-tippy="Wishlist"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-heart icons"></i></a></li>
+
+                                                <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
+                                                        data-tippy="Quick View" href="#" data-tippy-inertia="true"
+                                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                                        data-tippy-placement="left"><i
+                                                            class="icon-size-fullscreen icons"></i></a></li>
+                                                <li class="compare"><a data-tippy="Compare" href="#"
+                                                        data-tippy-inertia="true" data-tippy-delay="50"
+                                                        data-tippy-arrow="true" data-tippy-placement="left"><i
+                                                            class="icon-refresh icons"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product_label">
+                                            <span>-18%</span>
+                                        </div>
+                                    </div>
+                                    <div class="product_content grid_content text-center">
+                                        <div class="product_ratting">
+                                            <ul class="d-flex justify-content-center">
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star"></i></a></li>
+                                                <li><span>(2)</span></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="product_list_content">
+                                        <h4 class="product_name"><a href="product-details.html">Basic White Simple
+                                                Sneaker</a></h4>
+                                        <p><a href="#">shows</a></p>
+                                        <div class="price_box">
+                                            <span class="current_price">$43.00</span>
+                                            <span class="old_price">$46.00</span>
+                                        </div>
+                                        <div class="product_desc">
+                                            <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et
+                                                mattis
+                                                vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante
+                                                ipsum
+                                                primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                                Aenean
+                                                eleifend laoreet congue. Viva..</p>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
+                                                data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                                data-tippy-placement="top">Add To Cart</a>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a href="product-details.html">
-                                        <img class="primary_img" src="assets/img/product/product5.jpg"
-                                            alt="consectetur">
-                                    </a>
-                                    <div class="product_action">
-                                        <ul>
-                                            <li class="wishlist"><a href="#" data-tippy="Wishlist"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-heart icons"></i></a></li>
-
-                                            <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
-                                                    data-tippy="Quick View" href="#" data-tippy-inertia="true"
-                                                    data-tippy-delay="50" data-tippy-arrow="true"
-                                                    data-tippy-placement="left"><i
-                                                        class="icon-size-fullscreen icons"></i></a></li>
-                                            <li class="compare"><a data-tippy="Compare" href="#"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-refresh icons"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product_label">
-                                        <span>-18%</span>
-                                    </div>
-                                </div>
-                                <div class="product_content grid_content text-center">
-                                    <div class="product_ratting">
-                                        <ul class="d-flex justify-content-center">
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><span>(2)</span></li>
-                                        </ul>
-                                    </div>
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <div class="product_list_content">
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <p><a href="#">shows</a></p>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis
-                                            vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum
-                                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-                                            eleifend laoreet congue. Viva..</p>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a href="product-details.html">
-                                        <img class="primary_img" src="assets/img/product/product2.jpg"
-                                            alt="consectetur">
-                                    </a>
-                                    <div class="product_action">
-                                        <ul>
-                                            <li class="wishlist"><a href="#" data-tippy="Wishlist"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-heart icons"></i></a></li>
-
-                                            <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
-                                                    data-tippy="Quick View" href="#" data-tippy-inertia="true"
-                                                    data-tippy-delay="50" data-tippy-arrow="true"
-                                                    data-tippy-placement="left"><i
-                                                        class="icon-size-fullscreen icons"></i></a></li>
-                                            <li class="compare"><a data-tippy="Compare" href="#"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-refresh icons"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product_label">
-                                        <span>-18%</span>
-                                    </div>
-                                </div>
-                                <div class="product_content grid_content text-center">
-                                    <div class="product_ratting">
-                                        <ul class="d-flex justify-content-center">
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><span>(2)</span></li>
-                                        </ul>
-                                    </div>
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <div class="product_list_content">
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <p><a href="#">shows</a></p>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis
-                                            vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum
-                                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-                                            eleifend laoreet congue. Viva..</p>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a href="product-details.html">
-                                        <img class="primary_img" src="assets/img/product/product3.jpg"
-                                            alt="consectetur">
-                                    </a>
-                                    <div class="product_action">
-                                        <ul>
-                                            <li class="wishlist"><a href="#" data-tippy="Wishlist"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-heart icons"></i></a></li>
-
-                                            <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
-                                                    data-tippy="Quick View" href="#" data-tippy-inertia="true"
-                                                    data-tippy-delay="50" data-tippy-arrow="true"
-                                                    data-tippy-placement="left"><i
-                                                        class="icon-size-fullscreen icons"></i></a></li>
-                                            <li class="compare"><a data-tippy="Compare" href="#"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-refresh icons"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product_label">
-                                        <span>-18%</span>
-                                    </div>
-                                </div>
-                                <div class="product_content grid_content text-center">
-                                    <div class="product_ratting">
-                                        <ul class="d-flex justify-content-center">
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><span>(2)</span></li>
-                                        </ul>
-                                    </div>
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <div class="product_list_content">
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <p><a href="#">shows</a></p>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis
-                                            vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum
-                                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-                                            eleifend laoreet congue. Viva..</p>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a href="product-details.html">
-                                        <img class="primary_img" src="assets/img/product/product6.jpg"
-                                            alt="consectetur">
-                                    </a>
-                                    <div class="product_action">
-                                        <ul>
-                                            <li class="wishlist"><a href="#" data-tippy="Wishlist"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-heart icons"></i></a></li>
-
-                                            <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
-                                                    data-tippy="Quick View" href="#" data-tippy-inertia="true"
-                                                    data-tippy-delay="50" data-tippy-arrow="true"
-                                                    data-tippy-placement="left"><i
-                                                        class="icon-size-fullscreen icons"></i></a></li>
-                                            <li class="compare"><a data-tippy="Compare" href="#"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-refresh icons"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product_label">
-                                        <span>-18%</span>
-                                    </div>
-                                </div>
-                                <div class="product_content grid_content text-center">
-                                    <div class="product_ratting">
-                                        <ul class="d-flex justify-content-center">
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><span>(2)</span></li>
-                                        </ul>
-                                    </div>
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <div class="product_list_content">
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <p><a href="#">shows</a></p>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis
-                                            vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum
-                                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-                                            eleifend laoreet congue. Viva..</p>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a href="product-details.html">
-                                        <img class="primary_img" src="assets/img/product/product4.jpg"
-                                            alt="consectetur">
-                                    </a>
-                                    <div class="product_action">
-                                        <ul>
-                                            <li class="wishlist"><a href="#" data-tippy="Wishlist"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-heart icons"></i></a></li>
-
-                                            <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
-                                                    data-tippy="Quick View" href="#" data-tippy-inertia="true"
-                                                    data-tippy-delay="50" data-tippy-arrow="true"
-                                                    data-tippy-placement="left"><i
-                                                        class="icon-size-fullscreen icons"></i></a></li>
-                                            <li class="compare"><a data-tippy="Compare" href="#"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-refresh icons"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product_label">
-                                        <span>-18%</span>
-                                    </div>
-                                </div>
-                                <div class="product_content grid_content text-center">
-                                    <div class="product_ratting">
-                                        <ul class="d-flex justify-content-center">
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><span>(2)</span></li>
-                                        </ul>
-                                    </div>
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <div class="product_list_content">
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <p><a href="#">shows</a></p>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis
-                                            vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum
-                                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-                                            eleifend laoreet congue. Viva..</p>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a href="product-details.html">
-                                        <img class="primary_img" src="assets/img/product/product7.jpg"
-                                            alt="consectetur">
-                                    </a>
-                                    <div class="product_action">
-                                        <ul>
-                                            <li class="wishlist"><a href="#" data-tippy="Wishlist"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-heart icons"></i></a></li>
-
-                                            <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
-                                                    data-tippy="Quick View" href="#" data-tippy-inertia="true"
-                                                    data-tippy-delay="50" data-tippy-arrow="true"
-                                                    data-tippy-placement="left"><i
-                                                        class="icon-size-fullscreen icons"></i></a></li>
-                                            <li class="compare"><a data-tippy="Compare" href="#"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-refresh icons"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product_label">
-                                        <span>-18%</span>
-                                    </div>
-                                </div>
-                                <div class="product_content grid_content text-center">
-                                    <div class="product_ratting">
-                                        <ul class="d-flex justify-content-center">
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><span>(2)</span></li>
-                                        </ul>
-                                    </div>
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <div class="product_list_content">
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <p><a href="#">shows</a></p>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis
-                                            vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum
-                                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-                                            eleifend laoreet congue. Viva..</p>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a href="product-details.html">
-                                        <img class="primary_img" src="assets/img/product/product8.jpg"
-                                            alt="consectetur">
-                                    </a>
-                                    <div class="product_action">
-                                        <ul>
-                                            <li class="wishlist"><a href="#" data-tippy="Wishlist"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-heart icons"></i></a></li>
-
-                                            <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
-                                                    data-tippy="Quick View" href="#" data-tippy-inertia="true"
-                                                    data-tippy-delay="50" data-tippy-arrow="true"
-                                                    data-tippy-placement="left"><i
-                                                        class="icon-size-fullscreen icons"></i></a></li>
-                                            <li class="compare"><a data-tippy="Compare" href="#"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-refresh icons"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product_label">
-                                        <span>-18%</span>
-                                    </div>
-                                </div>
-                                <div class="product_content grid_content text-center">
-                                    <div class="product_ratting">
-                                        <ul class="d-flex justify-content-center">
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><span>(2)</span></li>
-                                        </ul>
-                                    </div>
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <div class="product_list_content">
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <p><a href="#">shows</a></p>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis
-                                            vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum
-                                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-                                            eleifend laoreet congue. Viva..</p>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 ">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a href="product-details.html">
-                                        <img class="primary_img" src="assets/img/product/product5.jpg"
-                                            alt="consectetur">
-                                    </a>
-                                    <div class="product_action">
-                                        <ul>
-                                            <li class="wishlist"><a href="#" data-tippy="Wishlist"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-heart icons"></i></a></li>
-
-                                            <li class="quick_view"><a data-toggle="modal" data-target="#modal_box"
-                                                    data-tippy="Quick View" href="#" data-tippy-inertia="true"
-                                                    data-tippy-delay="50" data-tippy-arrow="true"
-                                                    data-tippy-placement="left"><i
-                                                        class="icon-size-fullscreen icons"></i></a></li>
-                                            <li class="compare"><a data-tippy="Compare" href="#"
-                                                    data-tippy-inertia="true" data-tippy-delay="50"
-                                                    data-tippy-arrow="true" data-tippy-placement="left"><i
-                                                        class="icon-refresh icons"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product_label">
-                                        <span>-18%</span>
-                                    </div>
-                                </div>
-                                <div class="product_content grid_content text-center">
-                                    <div class="product_ratting">
-                                        <ul class="d-flex justify-content-center">
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star"></i></a></li>
-                                            <li><span>(2)</span></li>
-                                        </ul>
-                                    </div>
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <div class="product_list_content">
-                                    <h4 class="product_name"><a href="product-details.html">Basic White Simple
-                                            Sneaker</a></h4>
-                                    <p><a href="#">shows</a></p>
-                                    <div class="price_box">
-                                        <span class="current_price">$43.00</span>
-                                        <span class="old_price">$46.00</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis
-                                            vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum
-                                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-                                            eleifend laoreet congue. Viva..</p>
-                                    </div>
-                                    <div class="add_to_cart">
-                                        <a class="btn btn-primary" href="#" data-tippy="Add To Cart"
-                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
-                                            data-tippy-placement="top">Add To Cart</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pagination_style pagination justify-content-center">
-                        <ul class="d-flex">
-                            <li><a href="#">
-                                    << </a>
-                            </li>
-                            <li><a href="#">1</a></li>
-                            <li><a class="current" href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">>></a></li>
-                        </ul>
-                    </div>
-
-                    <!--shop toolbar end-->
-                    <!--shop wrapper end-->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--shop  area end-->
-
-    <!--newsletter section start-->
-    <section class="newsletter_section newsletter_padding border-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="newsletter_inner d-flex justify-content-between align-items-center">
-                        <div class="newsletter_text">
-                            <h3>keep connected</h3>
-                            <p>Get updates by subscribe our weekly newsletter</p>
-                        </div>
-                        <div class="newsletter_subscribe">
-                            <form id="mc-form">
-                                <input class="border-0" id="mc-email" type="email" autocomplete="off"
-                                    placeholder="Enter your email address">
-                                <i class="icon-envelope-open icons"></i>
-                                <button class="border-0" id="mc-submit">Subscribe</button>
-                            </form>
-                            <!-- mailchimp-alerts Start -->
-                            <div class="mailchimp-alerts text-centre">
-                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                                <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                                <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                            </div><!-- mailchimp-alerts end -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--newsletter section end-->
-
-    <!--footer area start-->
-    <footer class="footer_widgets">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-5">
-                    <div class="footer_widget_list">
-                        <div class="footer_logo">
-                            <a href="#"><img src="assets/img/logo/logo.png" alt=""></a>
-                        </div>
-                        <div class="footer_contact">
-                            <div class="footer_contact_list">
-                                <span>Our Location</span>
-                                <p>869 General Village Apt. 645, Moorebury, USA</p>
-                            </div>
-                            <div class="footer_contact_list">
-                                <span>24/7 hotline:</span>
-                                <a href="tel:(+99)0521282399">(+99) 052 128 2399</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-7 col-sm-7">
-                    <div class="footer_widget_list text-right">
-                        <div class="footer_menu">
-                            <ul class="d-flex justify-content-end">
-                                <li><a href="index.html">home</a></li>
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="product-details.html">Product</a></li>
-                                <li><a href="#">pages</a></li>
-                                <li><a href="blog.html">Blog</a></li>
+                        <div class="pagination_style pagination justify-content-center">
+                            <ul class="d-flex">
+                                <li><a href="#">
+                                        << </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a class="current" href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">>></a></li>
                             </ul>
                         </div>
-                        <div class="footer_social">
-                            <ul class="d-flex justify-content-end">
-                                <li><a href="https://twitter.com" data-tippy="Twitter" data-tippy-inertia="true"
-                                        data-tippy-delay="50" data-tippy-arrow="true" data-tippy-placement="top"><i
-                                            class="ion-social-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com" data-tippy="Facebook" data-tippy-inertia="true"
-                                        data-tippy-delay="50" data-tippy-arrow="true" data-tippy-placement="top"><i
-                                            class="ion-social-facebook"></i></a></li>
-                                <li><a href="https://www.google.com" data-tippy="googleplus" data-tippy-inertia="true"
-                                        data-tippy-delay="50" data-tippy-arrow="true" data-tippy-placement="top"><i
-                                            class="ion-social-googleplus-outline"></i></a></li>
-                                <li><a href="https://www.instagram.com" data-tippy="Instagram" data-tippy-inertia="true"
-                                        data-tippy-delay="50" data-tippy-arrow="true" data-tippy-placement="top"><i
-                                            class="ion-social-instagram-outline"></i></a></li>
-                                <li><a href="https://www.youtube.com" data-tippy="Youtube" data-tippy-inertia="true"
-                                        data-tippy-delay="50" data-tippy-arrow="true" data-tippy-placement="top"><i
-                                            class="ion-social-youtube"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="copyright_right">
-                            <p>©2021 <span>Uthr</span>. made with <i class="ion-heart"></i> by <a
-                                    href="https://hasthemes.com" target="_blank">HasThemes</a></p>
-                        </div>
+
+                        <!--shop toolbar end-->
+                        <!--shop wrapper end-->
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!--footer area end-->
+        <!--shop  area end-->
 
-    <!-- modal area start-->
-    <div class="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="ion-android-close"></i></span>
-                </button>
-                <div class="modal_body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="modal_zoom_gallery">
-                                    <div class="product_zoom_thumb">
-                                        <img src="assets/img/product/big-product/product1.png" alt="">
-                                    </div>
-                                </div>
+        <!--newsletter section start-->
+        <section class="newsletter_section newsletter_padding border-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="newsletter_inner d-flex justify-content-between align-items-center">
+                            <div class="newsletter_text">
+                                <h3>keep connected</h3>
+                                <p>Get updates by subscribe our weekly newsletter</p>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="modal_right">
-                                    <div class="modal_title mb-10">
-                                        <h2>Donec Ac Tempus</h2>
-                                    </div>
-                                    <div class="modal_price mb-10">
-                                        <span class="new_price">$64.99</span>
-                                        <span class="old_price">$78.99</span>
-                                    </div>
-                                    <div class="modal_description mb-15">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste
-                                            laborum ad impedit pariatur esse optio tempora sint ullam autem deleniti nam
-                                            in quos qui, </p>
-                                    </div>
-                                    <div class="variants_selects">
-                                        <div class="variants_size">
-                                            <h2>size</h2>
-                                            <select class="select_option">
-                                                <option selected value="1">s</option>
-                                                <option value="1">m</option>
-                                                <option value="1">l</option>
-                                                <option value="1">xl</option>
-                                                <option value="1">xxl</option>
-                                            </select>
-                                        </div>
-                                        <div class="variants_color">
-                                            <h2>color</h2>
-                                            <select class="select_option">
-                                                <option selected value="1">purple</option>
-                                                <option value="1">violet</option>
-                                                <option value="1">black</option>
-                                                <option value="1">pink</option>
-                                                <option value="1">orange</option>
-                                            </select>
-                                        </div>
-                                        <div class="modal_add_to_cart">
-                                            <form action="#">
-                                                <input min="1" max="100" step="2" value="1" type="number">
-                                                <button type="submit">add to cart</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="modal_social">
-                                        <h2>Share this product</h2>
-                                        <ul>
-                                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                            <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a>
-                                            </li>
-                                            <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                            <div class="newsletter_subscribe">
+                                <form id="mc-form">
+                                    <input class="border-0" id="mc-email" type="email" autocomplete="off"
+                                        placeholder="Enter your email address">
+                                    <i class="icon-envelope-open icons"></i>
+                                    <button class="border-0" id="mc-submit">Subscribe</button>
+                                </form>
+                                <!-- mailchimp-alerts Start -->
+                                <div class="mailchimp-alerts text-centre">
+                                    <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                    <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                                    <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                                </div><!-- mailchimp-alerts end -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- modal area end-->
+        </section>
+        <!--newsletter section end-->
 
-    <!-- JS
+        <!--footer area start-->
+        <footer class="footer_widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="footer_widget_list">
+                            <div class="footer_logo">
+                                <a href="#"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                            <div class="footer_contact">
+                                <div class="footer_contact_list">
+                                    <span>Our Location</span>
+                                    <p>869 General Village Apt. 645, Moorebury, USA</p>
+                                </div>
+                                <div class="footer_contact_list">
+                                    <span>24/7 hotline:</span>
+                                    <a href="tel:(+99)0521282399">(+99) 052 128 2399</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7">
+                        <div class="footer_widget_list text-right">
+                            <div class="footer_menu">
+                                <ul class="d-flex justify-content-end">
+                                    <li><a href="index.html">home</a></li>
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="product-details.html">Product</a></li>
+                                    <li><a href="#">pages</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_social">
+                                <ul class="d-flex justify-content-end">
+                                    <li><a href="https://twitter.com" data-tippy="Twitter" data-tippy-inertia="true"
+                                            data-tippy-delay="50" data-tippy-arrow="true" data-tippy-placement="top"><i
+                                                class="ion-social-twitter"></i></a></li>
+                                    <li><a href="https://www.facebook.com" data-tippy="Facebook"
+                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                            data-tippy-placement="top"><i class="ion-social-facebook"></i></a></li>
+                                    <li><a href="https://www.google.com" data-tippy="googleplus"
+                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                            data-tippy-placement="top"><i class="ion-social-googleplus-outline"></i></a>
+                                    </li>
+                                    <li><a href="https://www.instagram.com" data-tippy="Instagram"
+                                            data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true"
+                                            data-tippy-placement="top"><i class="ion-social-instagram-outline"></i></a>
+                                    </li>
+                                    <li><a href="https://www.youtube.com" data-tippy="Youtube" data-tippy-inertia="true"
+                                            data-tippy-delay="50" data-tippy-arrow="true" data-tippy-placement="top"><i
+                                                class="ion-social-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="copyright_right">
+                                <p>©2021 <span>Uthr</span>. made with <i class="ion-heart"></i> by <a
+                                        href="https://hasthemes.com" target="_blank">HasThemes</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer area end-->
+
+        <!-- modal area start-->
+        <div class="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="ion-android-close"></i></span>
+                    </button>
+                    <div class="modal_body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="modal_zoom_gallery">
+                                        <div class="product_zoom_thumb">
+                                            <img src="assets/img/product/big-product/product1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="modal_right">
+                                        <div class="modal_title mb-10">
+                                            <h2>Donec Ac Tempus</h2>
+                                        </div>
+                                        <div class="modal_price mb-10">
+                                            <span class="new_price">$64.99</span>
+                                            <span class="old_price">$78.99</span>
+                                        </div>
+                                        <div class="modal_description mb-15">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
+                                                iste
+                                                laborum ad impedit pariatur esse optio tempora sint ullam autem
+                                                deleniti nam
+                                                in quos qui, </p>
+                                        </div>
+                                        <div class="variants_selects">
+                                            <div class="variants_size">
+                                                <h2>size</h2>
+                                                <select class="select_option">
+                                                    <option selected value="1">s</option>
+                                                    <option value="1">m</option>
+                                                    <option value="1">l</option>
+                                                    <option value="1">xl</option>
+                                                    <option value="1">xxl</option>
+                                                </select>
+                                            </div>
+                                            <div class="variants_color">
+                                                <h2>color</h2>
+                                                <select class="select_option">
+                                                    <option selected value="1">purple</option>
+                                                    <option value="1">violet</option>
+                                                    <option value="1">black</option>
+                                                    <option value="1">pink</option>
+                                                    <option value="1">orange</option>
+                                                </select>
+                                            </div>
+                                            <div class="modal_add_to_cart">
+                                                <form action="#">
+                                                    <input min="1" max="100" step="2" value="1" type="number">
+                                                    <button type="submit">add to cart</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="modal_social">
+                                            <h2>Share this product</h2>
+                                            <ul>
+                                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a>
+                                                </li>
+                                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                                <li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a>
+                                                </li>
+                                                <li class="google-plus"><a href="#"><i
+                                                            class="fa fa-google-plus"></i></a>
+                                                </li>
+                                                <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal area end-->
+
+        <!-- JS
 ============================================ -->
 
-    <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/vendor/popper.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/jquery.scrollup.min.js"></script>
-    <script src="assets/js/images-loaded.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/jquery.nice-select.js"></script>
-    <script src="assets/js/tippy-bundle.umd.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/jquery.instagramFeed.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/mailchimp-ajax.js"></script>
+        <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
+        <script src="assets/js/vendor/popper.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/jquery.scrollup.min.js"></script>
+        <script src="assets/js/images-loaded.min.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/jquery.nice-select.js"></script>
+        <script src="assets/js/tippy-bundle.umd.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/jquery.instagramFeed.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/mailchimp-ajax.js"></script>
 
-    <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
-    <!-- <script type="module" src="./assets/js/shop.js"></script>
-    <script type="module" src="./assets/js/product.js"></script> -->
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+        <script type="module" src="./assets/js/product.js"></script>
+        <script type="module" src="./assets/js/shop.js"></script>
 
 
 
-</body>
-
-</html>
+        <!-- confirmation modal -->
+        <div id="confirmationModal" class="confirmation-modal-overlay" style="display:none;">
+            <div class="confirmation-modal">
+                <div class="modal-body">
+                    <p id="confirmationMessage">You added this item to your cart</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="confirmationOkBtn" class="btn btn-primary">OK</button>
+                    <button id="confirmationCancelBtn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
