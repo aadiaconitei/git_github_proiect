@@ -20,7 +20,7 @@
 
     var fav = [];
     try {
-      fav = JSON.parse(localStorage.getItem("wishlist") || "[]");
+      fav = JSON.parse(localStorage.getItem("favorites") || "[]");
     } catch (e) {}
     var favCount = fav.length;
     $(".wishlist-count").each(function () {
@@ -32,6 +32,44 @@
     });
 
     updateMiniCart(cart);
+  }
+
+  // helper - current auth user
+  function getCurrentUser() {
+    try {
+      return JSON.parse(localStorage.getItem("currentUser") || "null");
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function updateAuthLinks() {
+    var user = getCurrentUser();
+    var menu = document.querySelector(".dropdown_account_link");
+    if (!menu) return;
+
+    if (user) {
+      menu.innerHTML = `
+        <li><a href="my-account.html">My Account</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="#" class="logout-link">Logout</a></li>
+      `;
+      var logoutLink = menu.querySelector(".logout-link");
+      if (logoutLink) {
+        logoutLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          localStorage.removeItem("currentUser");
+          updateAuthLinks();
+          window.location.href = "login.html";
+        });
+      }
+    } else {
+      menu.innerHTML = `
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      `;
+    }
   }
 
   // update mini cart display
@@ -205,6 +243,7 @@
   $(document).ready(function () {
     $("select,.select_option").niceSelect();
     updateHeaderCounts();
+    updateAuthLinks();
 
     // handle mini cart item removal
     $(document).on("click", ".cart_remove a", function (e) {

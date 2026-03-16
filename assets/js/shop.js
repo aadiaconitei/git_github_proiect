@@ -1,4 +1,9 @@
 import ALL_PRODUCTS from "./product.js";
+import {
+  toggleFavorite,
+  isFavorite,
+  updateFavoritesIndicator,
+} from "./favorites.js";
 
 // filter state
 let selectedColors = [];
@@ -81,6 +86,7 @@ const renderItems = (products) => {
   productContainer.innerHTML = "";
   products.forEach((product, index) => {
     const id = product.id || `product-${index}`;
+    const isFav = isFavorite(id);
     const productElement = document.createElement("div");
     // grid layout handled by CSS; no extra classes needed on each item
     productElement.innerHTML = `
@@ -92,7 +98,7 @@ const renderItems = (products) => {
                                     <div class="product_action">
                                         <ul>
                                             <li class="wishlist"><a href="#" data-tippy="Wishlist" data-tippy-inertia="true" data-tippy-delay="50"
-                                            data-tippy-arrow="true" data-tippy-placement="left"><i class="icon-heart icons"></i></a></li>
+                                            data-tippy-arrow="true" data-tippy-placement="left"><i class="icon-heart icons${isFav ? " favorited" : ""}"></i></a></li>
 
                                             <li class="quick_view"><a data-toggle="modal" data-target="#modal_box" data-tippy="Quick View" href="#" data-tippy-inertia="true" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-placement="left"><i class="icon-size-fullscreen icons"></i></a></li>
                                             <li class="compare"><a data-tippy="Compare" href="#" data-tippy-inertia="true" data-tippy-delay="50"
@@ -217,26 +223,6 @@ const renderItems = (products) => {
       );
     });
   });
-  // wishlist handling
-  function getWishlist() {
-    try {
-      return JSON.parse(localStorage.getItem("wishlist") || "[]");
-    } catch (e) {
-      return [];
-    }
-  }
-  function saveWishlist(arr) {
-    localStorage.setItem("wishlist", JSON.stringify(arr));
-  }
-  function updateWishlistIndicator() {
-    const fav = getWishlist();
-    const count = fav.length;
-    document.querySelectorAll(".wishlist-count").forEach((el) => {
-      el.textContent = count || "";
-      el.style.display = count ? "inline-block" : "none";
-    });
-  }
-
   // heart icon click
   productContainer.querySelectorAll(".wishlist a").forEach((link) => {
     link.addEventListener("click", function (e) {
@@ -247,19 +233,25 @@ const renderItems = (products) => {
       const prod = products.find((p) => p.id === pid);
       if (!prod) return;
 
-      showConfirmation(`You added this ${prod.title} to your favorite`, () => {
-        const wish = getWishlist();
-        if (!wish.find((i) => i.id === pid)) {
-          wish.push({ id: pid, title: prod.title, image: prod.image });
-          saveWishlist(wish);
-        }
-        updateWishlistIndicator();
-      });
+      const wasFav = isFavorite(pid);
+      const nowFav = !wasFav;
+      toggleFavorite(pid);
+
+      showConfirmation(
+        `${prod.title} has been ${nowFav ? "added to" : "removed from"} your favorites`,
+        () => {
+          updateFavoritesIndicator();
+          const icon = this.querySelector("i");
+          if (icon) {
+            icon.classList.toggle("favorited", nowFav);
+          }
+        },
+      );
     });
   });
 
   updateCartIndicator();
-  updateWishlistIndicator();
+  updateFavoritesIndicator();
 };
 
 // filter functions
