@@ -32,6 +32,17 @@ body {
   height: 100%;
 }
 
+:root {
+  --body-bg: #ffffff;
+  --body-text: #000000;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --header-bg: #ffffff;
+  --primary: #1e1e1e;
+  --accent: #f84b4b;
+  --muted: rgba(0, 0, 0, 0.65);
+}
+
 body {
   line-height: 24px;
   font-size: 14px;
@@ -39,8 +50,78 @@ body {
   font-weight: 400;
   visibility: visible;
   font-family: "Poppins", sans-serif;
-  color: #000000;
+  background: var(--body-bg);
+  color: var(--body-text);
   letter-spacing: 0.02em;
+}
+
+/* Dark theme variables */
+.dark-theme {
+  --body-bg: #0b1220;
+  --body-text: #e8ebf8;
+  --card-bg: #151d34;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --header-bg: #0a0f1e;
+  --primary: #ffffff;
+  --accent: #7aa7ff;
+  --muted: rgba(255, 255, 255, 0.75);
+}
+
+body.dark-theme {
+  background: var(--body-bg);
+  color: var(--body-text);
+}
+
+/* Ensure text stays readable in dark mode */
+body.dark-theme,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme span,
+body.dark-theme li,
+body.dark-theme a,
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+  color: var(--body-text) !important;
+}
+
+body.dark-theme a {
+  color: var(--accent) !important;
+}
+
+body.dark-theme .header_area,
+body.dark-theme .header_top,
+body.dark-theme .shop_sidebar,
+body.dark-theme .footer_widgets,
+body.dark-theme .single_product,
+body.dark-theme .product_thumb,
+body.dark-theme .product_content,
+body.dark-theme .sidebar_widget,
+body.dark-theme .checkout_info {
+  background: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+body.dark-theme .dark_mode_toggle {
+  color: var(--primary);
+}
+
+.icon-heart.favorited {
+  color: var(--accent);
+}
+
+.dark_mode_toggle {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
 }
 
 h1,
@@ -668,7 +749,7 @@ textarea:-ms-input-placeholder {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .header_contact_info ul li i {
-    argin-right: 5px;
+    align-right: 5px;
   }
 }
 .header_contact_info ul li:last-child {
@@ -3934,6 +4015,7 @@ textarea:-ms-input-placeholder {
 
 .sidebar_widget {
   padding-right: 33px;
+  padding: 20px !important;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .sidebar_widget {
@@ -4265,9 +4347,17 @@ textarea:-ms-input-placeholder {
   align-items: center;
   justify-content: space-between;
   border: 1px solid #e5e5e5;
-  padding: 8px 10px;
+  padding: 15px 25px;
   margin: 0 0 40px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
+
+.shop_toolbar li i{
+  font-size: 25px;
+  margin-left: 10px;
+}
+
 @media only screen and (max-width: 767px) {
   .shop_toolbar {
     flex-direction: column-reverse;
@@ -4281,6 +4371,25 @@ textarea:-ms-input-placeholder {
   display: inline-block;
   color: #999999;
   font-weight: 400;
+}
+
+.wide{
+  padding: 8px 14px;
+  border-radius: 3px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+  outline: none;
+}
+
+.sale_wrapper{
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  width: 90% !important;
+  height: fit-content !important;
+}
+
+.orderby_wrapper span{
+  margin-right: 10px;
 }
 @media only screen and (max-width: 767px) {
   .sorting_by span {
@@ -4523,6 +4632,7 @@ textarea:-ms-input-placeholder {
 
 .row.shop_wrapper {
   flex-direction: row;
+  width: 100%;
 }
 
 .grid_list .action_links {
@@ -4667,10 +4777,23 @@ textarea:-ms-input-placeholder {
 
 .shop_wrapper {
   margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure the products container takes full width */
+.col-lg-9 .shop_wrapper,
+.col-md-8 .shop_wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 @media only screen and (max-width: 767px) {
   .shop_wrapper {
     margin-bottom: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
 @media only screen and (max-width: 767px) {
@@ -4681,9 +4804,91 @@ textarea:-ms-input-placeholder {
 .shop_wrapper .single_product {
   position: relative;
   margin-bottom: 24px;
+  width: 100%;
 }
-.shop_wrapper.grid_list .single_product {
-  margin-bottom: 30px;
+.confirmation-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.confirmation-modal {
+  background: var(--card-bg);
+  width: 600px;
+  border-radius: 6px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.confirmation-modal .modal-body {
+  margin-bottom: 25px;
+}
+
+.confirmation-modal .modal-body p {
+  font-size: 16px;
+  color: var(--body-text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.confirmation-modal .modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.confirmation-modal .modal-footer button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.confirmation-modal .modal-footer .btn-primary {
+  background: #333;
+  color: white;
+  padding: 9px 18px;
+}
+
+.confirmation-modal .modal-footer .btn-primary:hover {
+  background: #555;
+}
+
+.confirmation-modal .modal-footer .btn-secondary {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.confirmation-modal .modal-footer .btn-secondary:hover {
+  background: #d0d0d0;
+}
+
+#confirmationOkBtn {
+  background: #333;
+  color: white;
+  padding: 3px 15px !important;
 }
 
 /* shop page css end*/
@@ -7087,6 +7292,10 @@ textarea:-ms-input-placeholder {
   margin-top: 15px;
   display: block;
 }
+
+body.dark-theme .checkout_info label {
+  color: var(--primary) !important;
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .checkout_info.coupon_info {
     padding: 20px 14px;
@@ -7551,6 +7760,7 @@ textarea:-ms-input-placeholder {
   margin-bottom: 0;
   cursor: pointer;
   padding-left: 32px;
+  color: #000000 !important;
 }
 @media only screen and (max-width: 767px) {
   .panel-default label {
@@ -7570,7 +7780,7 @@ textarea:-ms-input-placeholder {
 .panel-default .card-body1 p {
   font-size: 13px;
   line-height: 24px;
-  color: #666666;
+  color: #000000;
   font-weight: 400;
 }
 
@@ -7896,3 +8106,151 @@ textarea:-ms-input-placeholder {
 /*modal css end*/
 
 /*# sourceMappingURL=style.css.map */
+
+/* Login, Register, My Account Section Styling */
+.login_section {
+  margin-top: 100px !important;
+  padding: 60px 0 !important;
+}
+
+.account_wrapper {
+  padding: 40px;
+  border: 1px solid #ebebeb;
+  background: var(--card-bg);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.account_wrapper h3 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.login_form .form-group,
+.contact_form .form-group {
+  margin-bottom: 20px;
+}
+
+.login_form label,
+.contact_form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.login_form .form-control,
+.contact_form .form-control,
+.login_form textarea,
+.contact_form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+  background: var(--body-bg);
+  color: var(--body-text);
+  transition: all 0.3s ease;
+}
+
+.login_form .form-control:focus,
+.contact_form .form-control:focus,
+.login_form textarea:focus,
+.contact_form textarea:focus {
+  outline: none;
+  border-color: #1e1e1e;
+  box-shadow: 0 0 5px rgba(30, 30, 30, 0.1);
+}
+
+body.dark-theme .login_form .form-control,
+body.dark-theme .contact_form .form-control,
+body.dark-theme .login_form textarea,
+body.dark-theme .contact_form textarea {
+  background: #0f1728;
+  border-color: #2a3a5a;
+  color: var(--body-text);
+}
+
+body.dark-theme .login_form .form-control:focus,
+body.dark-theme .contact_form .form-control:focus,
+body.dark-theme .login_form textarea:focus,
+body.dark-theme .contact_form textarea:focus {
+  border-color: #7aa7ff;
+  box-shadow: 0 0 5px rgba(122, 167, 255, 0.2);
+}
+
+.login_form .btn,
+.contact_form .btn {
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.login_form .btn-primary,
+.contact_form .btn-primary {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.login_form .btn-primary:hover,
+.contact_form .btn-primary:hover {
+  background: #000;
+}
+
+.login_form .btn-secondary,
+.contact_form .btn-secondary {
+  background: #ccc;
+  color: #333;
+}
+
+.login_form .btn-secondary:hover,
+.contact_form .btn-secondary:hover {
+  background: #999;
+}
+
+.login_form .btn-outline-secondary {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #1e1e1e;
+  padding: 10px 20px;
+}
+
+.login_form .btn-outline-secondary:hover {
+  background: #f5f5f5;
+  border-color: #1e1e1e;
+}
+
+.account_wrapper p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.account_wrapper p a {
+  color: #1e1e1e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.account_wrapper p a:hover {
+  text-decoration: underline;
+}
+
+body.dark-theme .account_wrapper p a {
+  color: #7aa7ff;
+}
+
+.dark_mode_toggle {
+  width: auto !important;
+  height: auto;
+  cursor: pointer;
+}

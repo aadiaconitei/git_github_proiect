@@ -42,6 +42,9 @@
     <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -137,7 +140,7 @@
                                     </ul>
 
                                 </li>
-                                <li><a href="contact.html">contact</a></li>
+                                <li><a href="#">buy</a></li>
                             </ul>
                         </div>
                     </div>
@@ -279,7 +282,7 @@
                                         <li><a href="index.html">demo</a> </li>
                                         <li><a href="shop.html">shop</a></li>
                                         <li><a href="product-details.html">product</a></li>
-                                        <li><a href="#">sale</a></li>
+                                        <li><a href="sale.html">sale</a></li>
                                         <li><a class="active" href="#">pages</a>
                                             <ul class="sub_menu">
                                                 <li><a href="cart.html">Cart Pages</a></li>
@@ -292,12 +295,15 @@
                                                 <li><a href="blog-details.html">Blog Details</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">contact</a></li>
+                                        <li><a href="#">buy</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="header_account">
                                 <ul class="d-flex">
+                                    <li class="theme_toggle"><a href="#" class="dark_mode_toggle"
+                                            aria-label="Toggle theme"><i class="bi bi-moon-stars-fill icons"></i></a>
+                                    </li>
                                     <li class="header_search"><a href="#"><i class="icon-magnifier icons"></i></a></li>
                                     <li class="account_link"><a href="#"><i class="icon-user icons"></i></a>
                                         <ul class="dropdown_account_link">
@@ -307,9 +313,9 @@
                                         </ul>
                                     </li>
                                     <li><a href="#"><i class="icon-heart icons"></i></a> <span
-                                            class="item_count">2</span></li>
+                                            class="item_count wishlist-count" style="display:none"></span></li>
                                     <li class="shopping_cart"><a href="#"><i class="icon-basket-loaded icons"></i></a>
-                                        <span class="item_count">2</span>
+                                        <span class="item_count cart-count" style="display:none"></span>
                                     </li>
                                 </ul>
                             </div>
@@ -369,82 +375,6 @@
                                         </tr>
                                     </thead>
                                     <tbody id="cart-products-body">
-                                        <!--
-                                        <tr class="border-top">
-                                            <td>
-                                                <div class="cart_product_thumb">
-                                                    <img src="assets/img/product/product4.jpg" alt="">
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="cart_product_text">
-                                                    <h4>Example With Title Product</h4>
-                                                    <ul>
-                                                        <li><i class="ion-ios-arrow-right"></i> Color : <span>White</span></li>
-                                                        <li><i class="ion-ios-arrow-right"></i> Size : <span>XL</span></li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="cart_product_price">
-                                                    <span>$45.05</span>
-                                                </div>
-                                            </td>
-                                            <td class="product_quantity">
-                                                <div class="cart_product_quantity">
-                                                    <input min="1" max="100" value="1" type="number">
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="cart_product_price">
-                                                    <span>$45.05</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="cart_product_remove text-right">
-                                                    <a href="#"><i class="ion-android-close"></i></a>
-                                                </div>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="border-top">
-                                            <td>
-                                                <div class="cart_product_thumb">
-                                                    <img src="assets/img/product/product6.jpg" alt="">
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="cart_product_text">
-                                                    <h4>Example With Title Product</h4>
-                                                    <ul>
-                                                        <li><i class="ion-ios-arrow-right"></i> Color : <span>White</span></li>
-                                                        <li><i class="ion-ios-arrow-right"></i> Size : <span>XL</span></li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="cart_product_price">
-                                                    <span>$45.05</span>
-                                                </div>
-                                            </td>
-                                            <td class="product_quantity">
-                                                <div class="cart_product_quantity">
-                                                    <input min="1" max="100" value="1" type="number">
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="cart_product_price">
-                                                    <span>$45.05</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="cart_product_remove text-right">
-                                                    <a href="#"><i class="ion-android-close"></i></a>
-                                                </div>
-                                            </td>
-
-                                        </tr>
-                                        -->
                                     </tbody>
                                 </table>
                             </div>
@@ -489,13 +419,13 @@
                         <div class="col-lg-4 col-md-6 col-sm-8">
                             <div class="grand_totall_area">
                                 <div class="grand_totall_inner border-bottom">
-                                    <div class="cart_subtotal d-flex justify-content-between">
+                                    <div class="cart_subtotal d-flex justify-content-between" id="cart-subtotal">
                                         <p>sub total </p>
-                                        <span id="cart-subtotal">$126.00</span>
+                                        <span>$0.00</span>
                                     </div>
-                                    <div class="cart_grandtotal d-flex justify-content-between">
+                                    <div class="cart_grandtotal d-flex justify-content-between" id="cart-grandtotal">
                                         <p>grand total</p>
-                                        <span id="cart-grandtotal">$126.00</span>
+                                        <span>$0.00</span>
                                     </div>
                                 </div>
                                 <div class="proceed_checkout_btn">
@@ -624,13 +554,11 @@
     <script src="assets/js/jquery.instagramFeed.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/mailchimp-ajax.js"></script>
-    <script src="assets/js/products_cart.js"></script>
-    <script src="assets/js/cart.js"></script>
 
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
-    
+    <script src="assets/js/cart.js"></script>
 
 
 

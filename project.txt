@@ -1,0 +1,33 @@
+Modificări generale:
+adaugare favicon nou, incarcat local
+tot conținutul să fie în română
+eliminat elementele nedorite/nefuncționale din site
+eliminat elemente nedorite din top nav
+schimbat logo
+modificat elementele din meniu: text + link
+toate link-urile din meniu funcționale
+actualizat zona de hero: text + imagine + buton ( minim 3)
+actualizat zona de footer
+modificat CSS
+
+Pagini noi de făcut:
+Myaccount
+Login ( este parțial făcut, vezi pagina checkout)
+Register
+Contact
+Produse salvate ca favorit
+Funcționalități JavaScript:
+Dark Mode
+Validate formulare: Subscribe, Contact, Cart, Checkout, Cupon
+Cart: adaugare / editare / stergere
+Checkout: editare / stergere
+TODO: filtrare pe categorie; sortare după preț; paginare
+Recomandari:
+array pentru produse: products.js
+localStorage pentru persistență
+folosește addEventListener pentru evenimente
+funcții separate: add / update / delete / render
+recalculare total la fiecare modificare
+folosește Copilot
+folosește branch individual
+pentru erori/pareri folosește issues de la repo github

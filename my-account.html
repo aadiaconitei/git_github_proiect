@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Uthr – Contact</title>
+    <title>Uthr – My Account</title>
     <meta name="description" content="Uthr Fashion eCommerce HTML Template" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -40,6 +40,42 @@
                                             href="#">uthrstore@domain.com</a></li>
                                 </ul>
                             </div>
+                            <div class="free_shipping_text">
+                                <p class="text-white">Free shipping worldwide for orders over $99 <a href="#">Learn
+                                        More</a></p>
+                            </div>
+                            <div class="header_top_sidebar d-flex align-items-center">
+                                <div class="header_social d-flex">
+                                    <span>Follow us</span>
+                                    <ul class="d-flex">
+                                        <li><a href="#"><i class="icon-social-twitter icons"></i></a></li>
+                                        <li><a href="#"><i class="icon-social-facebook icons"></i></a></li>
+                                        <li><a href="#"><i class="icon-social-instagram icons"></i></a></li>
+                                        <li><a href="#"><i class="icon-social-youtube icons"></i></a></li>
+                                        <li><a href="#"><i class="icon-social-pinterest icons"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="language_currency">
+                                    <ul class="d-flex">
+                                        <li class="language"><a href="#"> Eng <i
+                                                    class="icon-right ion-ios-arrow-down"></i></a>
+                                            <ul class="dropdown_language">
+                                                <li><a href="#">French</a></li>
+                                                <li><a href="#">Spanish</a></li>
+                                                <li><a href="#">Russian</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="currency"><a href="#"> USd <i
+                                                    class="icon-right ion-ios-arrow-down"></i></a>
+                                            <ul class="dropdown_currency">
+                                                <li><a href="#">€ Euro</a></li>
+                                                <li><a href="#">£ Pound Sterling</a></li>
+                                                <li><a href="#">$ US Dollar</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -60,12 +96,22 @@
                             <div class="main_menu d-none d-lg-block">
                                 <nav>
                                     <ul class="d-flex">
-                                        <li><a href="index.html">demo</a> </li>
+                                        <li><a class="" href="index.html">demo</a> </li>
                                         <li><a href="shop.html">shop</a></li>
                                         <li><a href="product-details.html">product</a></li>
                                         <li><a href="sale.html">sale</a></li>
-                                        <li><a href="#">pages</a></li>
-                                        <li><a href="blog.html">blog</a></li>
+                                        <li><a href="#">pages</a>
+                                            <ul class="sub_menu">
+                                                <li><a href="cart.html">Cart Pages</a></li>
+                                                <li><a href="checkout.html">Checkout Pages</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="blog.html">blog</a>
+                                            <ul class="sub_menu">
+                                                <li><a href="blog.html">Blog Pages</a></li>
+                                                <li><a href="blog-details.html">Blog Details</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a href="#">buy</a></li>
                                     </ul>
                                 </nav>
@@ -76,6 +122,13 @@
                                             aria-label="Toggle theme"><i class="bi bi-moon-stars-fill icons"></i></a>
                                     </li>
                                     <li class="header_search"><a href="#"><i class="icon-magnifier icons"></i></a>
+                                    </li>
+                                    <li class="account_link"><a href="#"><i class="icon-user icons"></i></a>
+                                        <ul class="dropdown_account_link">
+                                            <li><a href="my-account.html">My Account</a></li>
+                                            <li><a href="login.html">Login</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
                                     </li>
                                     <li><a href="favorites.html"><i class="icon-heart icons"></i></a> <span
                                             class="item_count wishlist-count" style="display:none"></span></li>
@@ -90,6 +143,7 @@
                 </div>
             </div>
         </div>
+        <!-- page search box -->
         <div class="page_search_box">
             <div class="search_close">
                 <i class="ion-close-round"></i>
@@ -106,49 +160,17 @@
     <section class="login_section mb-100">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-10">
+                <div class="col-lg-6">
                     <div class="account_wrapper">
-                        <h3>Contact Us</h3>
-                        <p class="text-center mb-4">Have a question or need help? Send us a message and we'll get back
-                            to you
-                            shortly.</p>
-                        <form id="contactForm" class="contact_form">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form_group">
-                                        <label for="contactName">Name</label>
-                                        <input type="text" id="contactName" class="form-control" placeholder="Your name"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form_group">
-                                        <label for="contactEmail">Email</label>
-                                        <input type="email" id="contactEmail" class="form-control"
-                                            placeholder="Your email" required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form_group">
-                                        <label for="contactMessage">Message</label>
-                                        <textarea id="contactMessage" class="form-control" rows="5"
-                                            placeholder="How can we help?" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 text-center">
-                                    <button type="submit" class="btn btn-primary">Send message</button>
-                                </div>
-                            </div>
-                        </form>
-                        <div id="contactSuccess" class="alert alert-success mt-4" role="alert" style="display:none">
-                            Thanks for reaching out! We'll get back to you soon.
-                        </div>
+                        <h3>My Account</h3>
+                        <div id="accountInfo" class="mt-3"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- footer area start -->
     <footer class="footer_widgets">
         <div class="container">
             <div class="row">
@@ -208,6 +230,7 @@
             </div>
         </div>
     </footer>
+    <!-- footer area end -->
 
     <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
     <script src="assets/js/vendor/popper.js"></script>
@@ -225,14 +248,28 @@
     <script src="assets/js/mailchimp-ajax.js"></script>
 
     <script src="assets/js/main.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            document.getElementById('contactSuccess').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('contactSuccess').style.display = 'none';
-                document.getElementById('contactForm').reset();
-            }, 3000);
+    <script type="module">
+        import { requireAuth, getCurrentUser, logout } from './assets/js/auth.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = requireAuth('login.html');
+            if (!user) return;
+
+            const accountInfo = document.getElementById('accountInfo');
+            accountInfo.innerHTML = `
+          <p>Welcome back, <strong>${user.name || user.email}</strong></p>
+          <p>Email: ${user.email}</p>
+          <div class="mt-3">
+            <a href="favorites.html" class="btn btn-primary">Your Favorites</a>
+            <button id="logoutBtn" class="btn btn-secondary ml-2">Logout</button>
+          </div>
+        `;
+
+            document.getElementById('logoutBtn').addEventListener('click', (e) => {
+                e.preventDefault();
+                logout();
+                window.location.href = 'login.html';
+            });
         });
     </script>
 </body>
