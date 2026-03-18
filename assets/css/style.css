@@ -21,11 +21,14 @@
 /*----------------------------------------*/
 /*-- Google Font --*/
 /*-- Common Style --*/
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -40,7 +43,12 @@ body {
   letter-spacing: 0.02em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
   margin-top: 0;
   font-family: "Poppins", sans-serif;
@@ -81,14 +89,19 @@ p:last-child {
   margin-bottom: 0;
 }
 
-a, button {
+a,
+button {
   color: inherit;
   line-height: inherit;
   text-decoration: none;
   cursor: pointer;
 }
 
-a, button, img, input, span {
+a,
+button,
+img,
+input,
+span {
   transition: all 0.3s ease 0s;
 }
 
@@ -110,7 +123,8 @@ a:hover {
   text-decoration: none;
 }
 
-button, input[type="submit"] {
+button,
+input[type="submit"] {
   cursor: pointer;
 }
 
@@ -167,7 +181,8 @@ figure {
   text-transform: uppercase;
 }
 
-.no-gutters > .col, .no-gutters > [class*="col-"] {
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
   padding-right: 0;
   padding-left: 0;
   margin: 0;
@@ -198,22 +213,26 @@ figure {
 /*-- 
     - Input Placeholder
 -----------------------------------------*/
-input:-moz-placeholder, textarea:-moz-placeholder {
+input:-moz-placeholder,
+textarea:-moz-placeholder {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
@@ -237,8 +256,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   z-index: 9999;
   border-radius: 50%;
   border: 2px solid #fff;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 #scrollUp:hover i {
   animation-name: fadeInUp;
@@ -379,7 +398,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   z-index: 999;
   top: 0;
   height: 100vh;
-  transition: .5s;
+  transition: 0.5s;
   left: 0;
   margin-left: -300px;
   padding: 55px 15px 30px;
@@ -406,7 +425,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .offcanvas_main_menu > li.menu-item-has-children.menu-open > span.menu-expand {
   transform: rotate(180deg);
 }
-.offcanvas_main_menu > li ul li.menu-item-has-children.menu-open span.menu-expand {
+.offcanvas_main_menu
+  > li
+  ul
+  li.menu-item-has-children.menu-open
+  span.menu-expand {
   transform: rotate(180deg);
 }
 
@@ -866,7 +889,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     margin-right: 7px;
   }
 }
-.language_currency > ul > li:hover ul.dropdown_currency, .language_currency > ul > li:hover ul.dropdown_language {
+.language_currency > ul > li:hover ul.dropdown_currency,
+.language_currency > ul > li:hover ul.dropdown_language {
   visibility: visible;
   max-height: 200px;
 }
@@ -933,7 +957,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #6a7964;
 }
 
-.dropdown_currency, .dropdown_language {
+.dropdown_currency,
+.dropdown_language {
   position: absolute;
   background: #fff;
   border: 1px solid #ededed;
@@ -941,7 +966,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   text-align: left;
   top: 117%;
   right: 0;
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
   overflow: hidden;
   z-index: 9999;
   border-radius: 3px;
@@ -949,18 +974,21 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   max-height: 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .dropdown_currency, .dropdown_language {
+  .dropdown_currency,
+  .dropdown_language {
     left: auto;
     right: 0;
   }
 }
 @media only screen and (max-width: 767px) {
-  .dropdown_currency, .dropdown_language {
+  .dropdown_currency,
+  .dropdown_language {
     left: auto;
     right: 0;
   }
 }
-.dropdown_currency li a, .dropdown_language li a {
+.dropdown_currency li a,
+.dropdown_language li a {
   text-transform: capitalize;
   display: block;
   font-size: 13px;
@@ -968,7 +996,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   line-height: 28px;
   color: #000000;
 }
-.dropdown_currency li a:hover, .dropdown_language li a:hover {
+.dropdown_currency li a:hover,
+.dropdown_language li a:hover {
   color: #6a7964;
 }
 
@@ -1046,7 +1075,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
-  transition: .3s;
+  transition: 0.3s;
   z-index: 99;
   top: 77px;
   text-align: left;
@@ -1160,8 +1189,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   text-align: left;
   top: 117%;
   right: -45px;
-  -webkit-transition: all .5s ease-out;
-  transition: all .5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   overflow: hidden;
   z-index: 9999;
   border-radius: 3px;
@@ -1202,7 +1231,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   z-index: 999;
   right: 0;
   top: 0;
-  transition: .5s;
+  transition: 0.5s;
   transform: translateX(100%);
   overflow-y: auto;
   box-shadow: 0 0 15px rgba(5, 0, 0, 0.1);
@@ -1362,7 +1391,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   z-index: 999;
   left: 0;
   top: 0;
-  transition: .3s;
+  transition: 0.3s;
   display: flex;
   align-items: center;
   opacity: 0;
@@ -1452,7 +1481,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   cursor: pointer;
   transform: scale(1) rotate(0deg);
   display: inline-block;
-  transition: .5s;
+  transition: 0.5s;
 }
 .search_close i:hover {
   color: #6a7964;
@@ -1691,7 +1720,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background: #fff;
 }
 
-.slick-current .slider_text h1, .slick-current .slider_text span, .slick-current .slider_text a, .slick-current .slider_text p {
+.slick-current .slider_text h1,
+.slick-current .slider_text span,
+.slick-current .slider_text a,
+.slick-current .slider_text p {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-duration: 1s;
@@ -2392,7 +2424,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   transform: scale(1.05);
 }
 .instagram_gallery a.instagram-image img {
-  transition: .3s;
+  transition: 0.3s;
 }
 
 /*newsletter css here*/
@@ -3144,7 +3176,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   overflow: hidden;
 }
 .product_thumb img {
-  transition: opacity 0.7s ease, transform 2s cubic-bezier(0, 0, 0.44, 1.18);
+  transition:
+    opacity 0.7s ease,
+    transform 2s cubic-bezier(0, 0, 0.44, 1.18);
   transform: scale(1, 1);
   width: 100%;
 }
@@ -3404,7 +3438,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .product_action ul li {
   padding-bottom: 15px;
-  transition: .4s;
+  transition: 0.4s;
 }
 @media only screen and (max-width: 575px) {
   .product_action ul li {
@@ -4029,7 +4063,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   margin-bottom: 22px;
 }
 
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
   width: 3px;
   height: 15px;
   top: -7px;
@@ -4181,7 +4217,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   position: absolute;
   top: 50%;
   transform: translatey(-50%);
-  transition: .3s;
+  transition: 0.3s;
 }
 .widget_color > ul > li span.checkmark::before {
   left: 44%;
@@ -5362,7 +5398,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background: #000000;
   left: 0;
   bottom: 0;
-  transition: .3s;
+  transition: 0.3s;
 }
 .product_info_button ul li:last-child a {
   margin-right: 0;
@@ -5561,7 +5597,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background: #fff;
   border-bottom: 1px solid #ededed;
   border-left: 1px solid #ededed;
-  content: '';
+  content: "";
   display: block;
   height: 10px;
   left: -6px;
@@ -5597,7 +5633,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   line-height: 32px;
   left: -7px;
   font-size: 18px;
-  transition: .3s;
+  transition: 0.3s;
   opacity: 0;
   visibility: hidden;
 }
@@ -6056,7 +6092,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background: #000000;
   opacity: 0;
   visibility: hidden;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .related_popup_icon {
@@ -6066,7 +6102,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   transform: translateX(-50%) translateY(-50%);
   opacity: 0;
   visibility: hidden;
-  transition: .3s;
+  transition: 0.3s;
 }
 .related_popup_icon a {
   font-size: 47px;
@@ -7158,7 +7194,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   text-transform: uppercase;
   font-size: 13px;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   border: 0;
   height: 45px;
   line-height: 45px;
@@ -7300,7 +7336,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #ffffff;
   background: #000000;
   font-weight: 600;
-  transition: .3s;
+  transition: 0.3s;
   margin-bottom: 0;
   border-radius: 5px;
 }
@@ -7332,7 +7368,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #ffffff;
   background: #6a7964;
   font-weight: 600;
-  transition: .3s;
+  transition: 0.3s;
   margin-bottom: 0;
   border-radius: 5px;
 }
@@ -7490,7 +7526,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   position: absolute;
   top: 12px;
   transform: translatey(-50%);
-  transition: .3s;
+  transition: 0.3s;
 }
 .panel_radio span.checkmark::before {
   left: 2px;
@@ -7651,19 +7687,19 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background: #6a7964;
 }
 .modal_social ul li.twitter a {
-  background: #1DA1F2;
+  background: #1da1f2;
 }
 .modal_social ul li.twitter a:hover {
   background: #6a7964;
 }
 .modal_social ul li.pinterest a {
-  background: #BD081B;
+  background: #bd081b;
 }
 .modal_social ul li.pinterest a:hover {
   background: #6a7964;
 }
 .modal_social ul li.google-plus a {
-  background: #DC5043;
+  background: #dc5043;
 }
 .modal_social ul li.google-plus a:hover {
   background: #6a7964;
@@ -7697,22 +7733,26 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   margin: 0;
 }
 
-.variants_size h2, .variants_color h2 {
+.variants_size h2,
+.variants_color h2 {
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 7px;
   line-height: 20px;
 }
-.variants_size.mb-15, .mb-15.variants_color {
+.variants_size.mb-15,
+.mb-15.variants_color {
   margin-bottom: 24px;
 }
-.variants_size .select_option, .variants_color .select_option {
+.variants_size .select_option,
+.variants_color .select_option {
   width: 100%;
   border-radius: 0;
   margin-bottom: 25px;
 }
-.variants_size .select_option .list, .variants_color .select_option .list {
+.variants_size .select_option .list,
+.variants_color .select_option .list {
   width: 100%;
   border-radius: 0;
 }
@@ -7745,7 +7785,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   text-transform: uppercase;
   background: #000000;
   color: #ffffff;
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
 }
 @media only screen and (max-width: 767px) {
