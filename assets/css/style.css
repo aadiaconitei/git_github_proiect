@@ -11,9 +11,45 @@
     08. about css here
     09. contact page css here
 */
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --fd-white: #fbfbf7;
+  --fd-ivory: #f8f6ef;
+  --fd-antracit: #2f3035;
+  --fd-midnight: #1f2128;
+  --fd-gold: #d4af72;
+  --fd-gold-soft: rgba(212, 175, 114, 0.28);
+  --fd-glass: rgba(255, 255, 255, 0.28);
+  --fd-glass-border: rgba(255, 255, 255, 0.45);
+  --fd-shadow: 0 16px 40px rgba(10, 12, 18, 0.14);
+  --fd-tr: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: "Inter", "Poppins", sans-serif;
+  background: radial-gradient(
+    circle at top,
+    #fffdfa 0%,
+    #f3efe5 40%,
+    #e8e4dc 100%
+  );
+  color: var(--fd-midnight);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button {
+  transition: var(--fd-tr);
 }
 
 /*----------------------------------------*/
@@ -4668,6 +4704,176 @@ textarea:-ms-input-placeholder {
 .shop_wrapper {
   margin-bottom: 10px;
 }
+
+/* FurDeco Bespoke Premium Theme */
+.filtered-glass,
+.card-glass,
+.glass-panel,
+.hero-overlay,
+.main_menu nav > ul > li ul.sub_menu,
+.dropdown_account_link,
+.page_search_box,
+.mini_cart,
+.newsletter_subscribe,
+.product_content,
+.blog_content,
+.service_box {
+  background: var(--fd-glass);
+  border: 1px solid var(--fd-glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--fd-shadow);
+  border-radius: 16px;
+}
+
+.main_menu nav > ul > li > a,
+.header_account > ul > li > a,
+.offcanvas_main_menu li a,
+.btn,
+.button,
+.single_product .product_content h4 a,
+.blog_content h3 a,
+.section_title h2,
+.shop_toolbar .sorting_by span,
+.product_desc p,
+.footer a {
+  transition: var(--fd-tr);
+}
+
+.main_menu nav > ul > li > a:hover,
+.header_account > ul > li > a:hover,
+.offcanvas_main_menu li a:hover,
+.btn:hover,
+.button:hover,
+.single_product .product_content h4 a:hover,
+.blog_content h3 a:hover,
+.section_title h2:hover,
+.shop_toolbar .sorting_by span:hover,
+.footer a:hover {
+  color: var(--fd-antracit);
+  transform: translateY(-2px);
+  text-shadow: 1px 1px 6px rgba(55, 50, 40, 0.25);
+}
+
+.single_product .product_thumb img,
+.product_thumb img,
+.blog_thumbs img,
+.hero_banner img,
+.section-banner img {
+  object-fit: cover;
+  transition: var(--fd-tr);
+}
+
+.single_product .product_thumb:hover img,
+.product_thumb:hover img,
+.blog_thumbs:hover img,
+.section-banner:hover img {
+  transform: scale(1.05);
+  opacity: 0.92;
+}
+
+.single_product:hover .product_content,
+.card-glass:hover,
+.filter__list:hover,
+.product_item:hover,
+.blog_card:hover,
+.testimonial_item:hover,
+.header_top:hover,
+.footer_top:hover,
+.service_box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(30, 25, 15, 0.2);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+}
+
+h3 {
+  font-size: clamp(1.4rem, 3.2vw, 2.6rem);
+}
+
+p,
+a,
+span,
+label,
+li {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+}
+
+.header_top,
+.main_header,
+.sticky-header.sticky,
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 253, 243, 0.7)
+  );
+}
+
+@media (max-width: 991px) {
+  .main_header,
+  .offcanvas_menu_wrapper,
+  .offcanvas_main_menu,
+  .header_top {
+    padding: 18px 20px;
+  }
+
+  .main_menu nav > ul > li {
+    margin-right: 22px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section_title h2,
+  .header_account > ul > li > a,
+  .main_menu nav > ul > li > a {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+  }
+}
+
+/* Opțiuni interactive indicative */
+.btn,
+.button,
+.link,
+.main_menu nav > ul > li > a,
+.offcanvas_main_menu li a {
+  will-change: transform, opacity;
+}
+
+/* Scheme de culori FurDeco */
+.bg-grey,
+.container,
+.section_title {
+  color: var(--fd-antracit);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  transition: var(--fd-tr);
+}
+
+/* Mesaj cald și compasiune */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    140deg,
+    rgba(255, 236, 211, 0.08),
+    rgba(240, 242, 245, 0.07)
+  );
+}
+
 @media only screen and (max-width: 767px) {
   .shop_wrapper {
     margin-bottom: 5px;
