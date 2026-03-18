@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color:#f0f8ff;
+  --heading-main-bg-color:#5D4F41;
+}
+
+.main-logo-navbar {
+  height: 65px; 
+}
+
+.navbar ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 20px 60px; 
+  list-style: none;
+  text-decoration: none;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 30px; 
+}
+
+.wooden-kitchen-pp {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+.nav-links > a {
+  text-decoration: none;
+  font-family: Inter;
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+.cart-items > a{
+  font-family: Inter;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.main-heading{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-heading-center{
+  position: absolute;
+  text-align: center;
+  background-color:rgb(93, 79, 65 , 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  width: 90;
+  max-width: 850px;
+  padding: 60px 80px;
+  font-family: Inter;
+  font-weight: 200;
+  font-size:large;
+  color: var(--primary-color);
+}
+
+.button-order-now{
+  padding: 20px 40px;
+  border-radius: 5px;
+  border: 0px;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: medium;
+  padding-top: ;
+}
