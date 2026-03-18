@@ -383,7 +383,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-<<<<<<< HEAD
   if (!sourceProducts.length) {
     cartBody.innerHTML = "";
     return;
@@ -452,7 +451,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 <td>
                     <div class="cart_product_remove text-right">
                         <a href="#"><i class="ion-android-close"></i></a>
-=======
   var sourceProducts = getCartFromStorage();
 
   function formatPrice(value) {
@@ -465,7 +463,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 <td colspan="6">
                     <div class="cart_product_text">
                         <h4>Cart is empty.</h4>
->>>>>>> d351a66d6ced297712a43785cc5dd8f081cf104b
                     </div>
                 </td>
             </tr>

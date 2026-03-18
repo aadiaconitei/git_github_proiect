@@ -4658,10 +4658,7 @@ textarea:-ms-input-placeholder {
 
 .row.shop_wrapper {
   flex-direction: row;
-<<<<<<< HEAD
   width: 100%;
-=======
->>>>>>> d351a66d6ced297712a43785cc5dd8f081cf104b
 }
 
 .grid_list .action_links {

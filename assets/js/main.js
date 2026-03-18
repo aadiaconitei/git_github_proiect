@@ -1,5 +1,4 @@
 (function ($) {
-<<<<<<< HEAD
   "use strict";
 
   // update header counts for cart and wishlist
@@ -505,7 +504,6 @@
     });
   });
 })(jQuery);
-=======
     "use strict";
     
     new WOW().init();  
@@ -827,4 +825,3 @@
     
     
 })(jQuery);	
->>>>>>> d351a66d6ced297712a43785cc5dd8f081cf104b
